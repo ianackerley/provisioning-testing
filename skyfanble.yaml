@@ -60,7 +60,7 @@ sensor:
     
 switch:
   - platform: gpio
-    name: "${esphome_name} Onboard LED"
+    name: "Onboard LED"
     pin: 2
     inverted: False
 
