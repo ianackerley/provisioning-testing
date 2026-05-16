@@ -9,7 +9,7 @@ esphome:
 
   project:
     name: ianackerley.skyfanble
-    version: "1.0"
+    version: "1.1"
 
 dashboard_import:
   package_import_url: github://ianackerley/provisioning-testing/skyfanble.yaml@main
@@ -57,6 +57,12 @@ sensor:
     name: "${friendly_name} WiFi Signal"
     update_interval: 60s
     disabled_by_default: true
+    
+switch:
+  - platform: gpio
+    name: "${esphome_name} Onboard LED"
+    pin: 2
+    inverted: False
 
 tuya:
   id: tuyamcu
